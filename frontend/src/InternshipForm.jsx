@@ -48,7 +48,7 @@ const InternshipForm = () => {
         if (validateForm()) {
             toast.success("Application submitted successfully!", {
                 position: "top-center",
-                autoClose: 2000,
+                autoClose: 3000,
             });
         } else {
             toast.error("Please fill in all required fields.", {
@@ -65,13 +65,20 @@ const InternshipForm = () => {
                 <h1 className="text-3xl font-bold mb-4 leading-tight text-center uppercase tracking-wide">
                     SSPD Tech <br /> Summer Internship 2025
                 </h1>
+
                 <p className="text-lg mt-4 text-gray-300">☀️ Summer is Here! What’s Your Plan?</p>
-                <div className="mt-4 space-y-2 text-gray-400 ">
-                    <p>📱 Scrolling endlessly?</p>
+
+                <div className="mt-4 space-y-2 text-gray-400">
+                    <p>📱 Scrolling endlessly on your phone?</p>
                     <p>🍿 Binge-watching shows?</p>
                     <p>😴 Sleeping till noon?</p>
                 </div>
+
                 <p className="mt-6 font-semibold text-lg text-white">Why not do something that actually grows your career? 🚀</p>
+
+                <p className="mt-4 text-gray-300">Introducing "Future Ready Internship 2025"—a Virtual Internship Program brought to you by SSPD Technology Solutions! 💻 Work from home, spend just 4-5 hours daily, and gain real-world experience while building skills that make you job-ready! And guess what? It’s 100% FREE! 💯</p>
+
+                <p className="mt-6 text-lg font-semibold text-white">💡 Choose your field:</p>
                 <ul className="list-none mt-4 space-y-2 text-gray-300">
                     <li className="flex items-center gap-2"><span className="text-xl">💻</span> Software Development</li>
                     <li className="flex items-center gap-2"><span className="text-xl">📊</span> Sales & Marketing</li>
@@ -79,11 +86,22 @@ const InternshipForm = () => {
                     <li className="flex items-center gap-2"><span className="text-xl">🎨</span> Graphic & UI/UX Designing</li>
                     <li className="flex items-center gap-2"><span className="text-xl">🎬</span> Video Editing</li>
                 </ul>
+
+                <p className="mt-6 font-semibold text-lg text-white">🎁 What you’ll get:</p>
+                <ul className="list-none mt-4 space-y-2 text-gray-300">
+                    <li className="flex items-center gap-2"><span className="text-xl">✅</span> E-Certificate & Hard Copy Certificate 📜</li>
+                    <li className="flex items-center gap-2"><span className="text-xl">✅</span> Letter of Recognition & Appreciation Kit 🎁🏆</li>
+                    <li className="flex items-center gap-2"><span className="text-xl">✅</span> Mentorship from Industry Experts & Placement Support 🚀</li>
+                </ul>
+
+                <p className="mt-4 text-gray-300">No prior experience? No worries! We’ll train and guide you!</p>
+
                 <p className="mt-6 text-lg text-center text-gray-200 font-semibold">📩 Seats are filling fast! Apply Now!</p>
-                <div className="mt-4 text-center text-gray-400">
+
+                {/* <div className="mt-4 text-center text-gray-400">
                     <p className="hover:text-white transition duration-300 cursor-pointer">📞 9987546743</p>
                     <p className="hover:text-white transition duration-300 cursor-pointer">✉️ info@sspdtech.com</p>
-                </div>
+                </div> */}
             </div>
 
             {/* Right Section - Form */}
@@ -97,20 +115,22 @@ const InternshipForm = () => {
                             <input
                                 name="fullName"
                                 type="text"
-                                placeholder="Full Name"
+                                placeholder="Full Name *"
                                 className="p-3 border border-gray-300 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-black"
                                 value={formData.fullName}
                                 onChange={handleChange}
+                                required
                             />
                         </div>
                         <div className="relative">
                             <input
                                 name="email"
                                 type="email"
-                                placeholder="Email"
+                                placeholder="Email *"
                                 className="p-3 border border-gray-300 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-black"
                                 value={formData.email}
                                 onChange={handleChange}
+                                required
                             />
                         </div>
                     </div>
@@ -121,20 +141,22 @@ const InternshipForm = () => {
                             <input
                                 name="phone"
                                 type="number"
-                                placeholder="Phone No."
+                                placeholder="Phone No. *"
                                 className="p-3 border border-gray-300 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-black"
                                 value={formData.phone}
                                 onChange={handleChange}
+                                required
                             />
                         </div>
                         <div className="relative">
                             <input
                                 name="city"
                                 type="text"
-                                placeholder="City"
+                                placeholder="City *"
                                 className="p-3 border border-gray-300 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-black"
                                 value={formData.city}
                                 onChange={handleChange}
+                                required
                             />
                         </div>
                     </div>
@@ -147,10 +169,12 @@ const InternshipForm = () => {
                                 className="p-3 border border-gray-300 rounded-lg w-full text-gray-600 focus:outline-none focus:ring-2 focus:ring-black"
                                 value={formData.education}
                                 onChange={handleChange}
+                                required
                             >
-                                <option value="">Current Educational Status</option>
-                                <option>High School</option>
+                                <option value="">Current Educational Status *</option>
+                                <option>HSC Passed</option>
                                 <option>Undergraduate</option>
+                                <option>Graduate</option>
                                 <option>Postgraduate</option>
                                 <option>Diploma</option>
                             </select>
@@ -159,10 +183,11 @@ const InternshipForm = () => {
                             <input
                                 name="college"
                                 type="text"
-                                placeholder="College/University Name"
+                                placeholder="College/University Name *"
                                 className="p-3 border border-gray-300 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-black"
                                 value={formData.college}
                                 onChange={handleChange}
+                                required
                             />
                         </div>
                     </div>
@@ -173,10 +198,11 @@ const InternshipForm = () => {
                             <input
                                 name="degree"
                                 type="text"
-                                placeholder="Degree & Specialization"
+                                placeholder="Degree & Specialization *"
                                 className="p-3 border border-gray-300 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-black"
                                 value={formData.degree}
                                 onChange={handleChange}
+                                required
                             />
                         </div>
                         <div className="relative">
@@ -185,8 +211,9 @@ const InternshipForm = () => {
                                 className="p-3 border border-gray-300 rounded-lg w-full text-gray-600 focus:outline-none focus:ring-2 focus:ring-black"
                                 value={formData.role}
                                 onChange={handleChange}
+                                required
                             >
-                                <option value="">Preferred Internship Role</option>
+                                <option value="">Preferred Internship Role *</option>
                                 <option>Software Development</option>
                                 <option>Sales & Marketing</option>
                                 <option>HR & Recruitment</option>
@@ -203,8 +230,9 @@ const InternshipForm = () => {
                             className="w-full p-3 border border-gray-300 rounded-lg text-gray-600 focus:outline-none focus:ring-2 focus:ring-black"
                             value={formData.experience}
                             onChange={handleChange}
+                            required
                         >
-                            <option value="">Do you have prior experience?</option>
+                            <option value="">Do you have prior experience? *</option>
                             <option>Yes</option>
                             <option>No</option>
                             <option>Maybe</option>
@@ -217,8 +245,9 @@ const InternshipForm = () => {
                             className="w-full p-3 border border-gray-300 rounded-lg text-gray-600 focus:outline-none focus:ring-2 focus:ring-black"
                             value={formData.availability}
                             onChange={handleChange}
+                            required
                         >
-                            <option value="">Are you available for 4-5 hours per day?</option>
+                            <option value="">Are you available for 4-5 hours per day? *</option>
                             <option>Yes</option>
                             <option>No</option>
                             <option>Maybe</option>
@@ -231,8 +260,9 @@ const InternshipForm = () => {
                             className="w-full p-3 border border-gray-300 rounded-lg text-gray-600 focus:outline-none focus:ring-2 focus:ring-black"
                             value={formData.referral}
                             onChange={handleChange}
+                            required
                         >
-                            <option value="">How did you hear about this?</option>
+                            <option value="">How did you hear about this? *</option>
                             <option>Social Media</option>
                             <option>College Referral</option>
                             <option>Friend/Family</option>
@@ -248,6 +278,7 @@ const InternshipForm = () => {
                             className="w-5 h-5 mt-1 cursor-pointer accent-black"
                             checked={formData.agreement}
                             onChange={handleChange}
+                            required
                         />
                         <p className="text-sm text-gray-600 cursor-default">
                             I confirm that all details are correct and I will complete the internship.
