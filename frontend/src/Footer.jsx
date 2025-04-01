@@ -1,10 +1,10 @@
 // Footer.jsx
 import React from "react";
-import logo from "./assets/logo_raw.jpg"; // Ensure the image path is correct
+import logo from "./assets/logo.jpg"; // Ensure the image path is correct
 
 const Footer = () => {
     return (
-        <footer className="bg-gradient-to-t from-black to-gray-900 text-white p-10 shadow-lg cursor-default select-none">
+        <footer className="bg-cyan-600 text-white p-10 shadow-lg cursor-default select-none">
             <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
 
                 {/* Logo Section */}
@@ -16,7 +16,7 @@ const Footer = () => {
                 </div>
 
                 {/* Contact Information */}
-                <div className="text-center md:text-left mt-6 md:mt-0 text-gray-300 text-sm">
+                <div className="text-center md:text-left mt-6 md:mt-0 text-white text-sm">
                     <p className="flex items-center justify-center md:justify-start gap-2">
                         📞 <span className="hover:text-white transition duration-300 cursor-pointer">9987546743</span>
                     </p>
@@ -33,7 +33,7 @@ const Footer = () => {
             </div>
 
             {/* Copyright Section */}
-            <div className="text-center mt-6 border-t border-gray-700 pt-4 text-xs tracking-wide text-gray-400">
+            <div className="text-center mt-6 border-t border-gray-700 pt-4 text-xs tracking-wide text-white">
                 © 2025 SSPD Tech. All Rights Reserved.
             </div>
         </footer>

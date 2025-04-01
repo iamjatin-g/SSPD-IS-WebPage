@@ -61,14 +61,14 @@ const InternshipForm = () => {
     return (
         <div className="flex flex-col lg:flex-row min-h-screen bg-gray-100">
             {/* Left Section */}
-            <div className="lg:w-3/10 w-full bg-gradient-to-b from-black to-gray-900 text-white p-10 flex flex-col justify-center shadow-lg cursor-default select-none">
+            <div className="lg:w-3/10 w-full bg-cyan-600 text-white p-10 flex flex-col justify-center shadow-lg cursor-default select-none">
                 <h1 className="text-3xl font-bold mb-4 leading-tight text-center uppercase tracking-wide">
                     SSPD Tech <br /> Summer Internship 2025
                 </h1>
 
-                <p className="text-lg mt-4 text-gray-300">☀️ Summer is Here! What’s Your Plan?</p>
+                <p className="text-lg mt-4 text-white">☀️ Summer is Here! What’s Your Plan?</p>
 
-                <div className="mt-4 space-y-2 text-gray-400">
+                <div className="mt-4 space-y-2 text-white">
                     <p>📱 Scrolling endlessly on your phone?</p>
                     <p>🍿 Binge-watching shows?</p>
                     <p>😴 Sleeping till noon?</p>
@@ -76,29 +76,33 @@ const InternshipForm = () => {
 
                 <p className="mt-6 font-semibold text-lg text-white">Why not do something that actually grows your career? 🚀</p>
 
-                <p className="mt-4 text-gray-300">Introducing "Future Ready Internship 2025"—a Virtual Internship Program brought to you by SSPD Technology Solutions! 💻 Work from home, spend just 4-5 hours daily, and gain real-world experience while building skills that make you job-ready! And guess what? It’s 100% FREE! 💯</p>
+                <p className="mt-4 text-white">Introducing "Summer Virtual Internship Program 2025" brought to you by SSPD Technology Solutions! 💻 Work from home, spend just 4-5 hours daily, and gain real-world experience while building skills that make you job-ready! And guess what? It’s 100% FREE! 💯</p>
 
                 <p className="mt-6 text-lg font-semibold text-white">💡 Choose your field:</p>
-                <ul className="list-none mt-4 space-y-2 text-gray-300">
+                <ul className="list-none mt-4 space-y-2 text-white">
                     <li className="flex items-center gap-2"><span className="text-xl">💻</span> Software Development</li>
-                    <li className="flex items-center gap-2"><span className="text-xl">📊</span> Sales & Marketing</li>
+                    <li className="flex items-center gap-2"><span className="text-xl">📊</span> Business Development</li>
+                    <li className="flex items-center gap-2"><span className="text-xl">📈</span> Digital Marketing</li>
                     <li className="flex items-center gap-2"><span className="text-xl">🤝</span> HR & Recruitment</li>
-                    <li className="flex items-center gap-2"><span className="text-xl">🎨</span> Graphic & UI/UX Designing</li>
+                    <li className="flex items-center gap-2"><span className="text-xl">🎨</span> Graphic Designing</li>
                     <li className="flex items-center gap-2"><span className="text-xl">🎬</span> Video Editing</li>
                 </ul>
 
                 <p className="mt-6 font-semibold text-lg text-white">🎁 What you’ll get:</p>
-                <ul className="list-none mt-4 space-y-2 text-gray-300">
+                <ul className="list-none mt-4 space-y-2 text-white">
                     <li className="flex items-center gap-2"><span className="text-xl">✅</span> E-Certificate & Hard Copy Certificate 📜</li>
-                    <li className="flex items-center gap-2"><span className="text-xl">✅</span> Letter of Recognition & Appreciation Kit 🎁🏆</li>
+                    <li className="flex items-center gap-2"><span className="text-xl">✅</span> Offer Letter ✉️</li>
+                    <li className="flex items-center gap-2"><span className="text-xl">✅</span> Letter of Recognition 📖</li>
+                    <li className="flex items-center gap-2"><span className="text-xl">✅</span> Appreciation Kit 🎁</li>
+                    <li className="flex items-center gap-2"><span className="text-xl">✅</span> Experience Letter ✉️</li>
                     <li className="flex items-center gap-2"><span className="text-xl">✅</span> Mentorship from Industry Experts & Placement Support 🚀</li>
                 </ul>
 
-                <p className="mt-4 text-gray-300">No prior experience? No worries! We’ll train and guide you!</p>
+                <p className="mt-4 text-white">No prior experience? No worries! We’ll train and guide you!</p>
 
                 <p className="mt-6 text-lg text-center text-gray-200 font-semibold">📩 Seats are filling fast! Apply Now!</p>
 
-                {/* <div className="mt-4 text-center text-gray-400">
+                {/* <div className="mt-4 text-center text-white">
                     <p className="hover:text-white transition duration-300 cursor-pointer">📞 9987546743</p>
                     <p className="hover:text-white transition duration-300 cursor-pointer">✉️ info@sspdtech.com</p>
                 </div> */}
@@ -215,7 +219,8 @@ const InternshipForm = () => {
                             >
                                 <option value="">Preferred Internship Role *</option>
                                 <option>Software Development</option>
-                                <option>Sales & Marketing</option>
+                                <option>Business Development</option>
+                                <option>Digital Marketing</option>
                                 <option>HR & Recruitment</option>
                                 <option>Graphic & UI/UX Designing</option>
                                 <option>Video Editing</option>
@@ -275,7 +280,7 @@ const InternshipForm = () => {
                         <input
                             type="checkbox"
                             name="agreement"
-                            className="w-5 h-5 mt-1 cursor-pointer accent-black"
+                            className="w-5 h-5 mt-1 cursor-pointer"
                             checked={formData.agreement}
                             onChange={handleChange}
                             required
@@ -288,10 +293,15 @@ const InternshipForm = () => {
                     {/* Submit Button */}
                     <button
                         type="submit"
-                        className="w-40 mx-auto p-3 bg-black text-white rounded-lg font-bold transition duration-300 hover:bg-gray-800 hover:scale-105"
+                        className={`w-40 mx-auto p-3 rounded-lg font-bold transition duration-300 ${formData.agreement
+                            ? "bg-cyan-600 text-white hover:bg-cyan-600 hover:scale-105 cursor-pointer"
+                            : "bg-gray-400 text-gray-700 cursor-not-allowed"
+                            }`}
+                        disabled={!formData.agreement}
                     >
                         Submit
                     </button>
+
                 </form>
             </div>
         </div>
