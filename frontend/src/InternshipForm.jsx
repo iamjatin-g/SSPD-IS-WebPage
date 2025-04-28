@@ -61,14 +61,14 @@ const InternshipForm = () => {
     return (
         <div className="flex flex-col lg:flex-row min-h-screen bg-gray-100">
             {/* Left Section */}
-            <div className="lg:w-3/10 w-full bg-cyan-600 text-white p-10 flex flex-col justify-center shadow-lg cursor-default select-none">
+            <div className="lg:w-3/10 w-full bg-gradient-to-b from-black to-gray-900 text-white p-10 flex flex-col justify-center shadow-lg cursor-default select-none">
                 <h1 className="text-3xl font-bold mb-4 leading-tight text-center uppercase tracking-wide">
                     SSPD Tech <br /> Summer Internship 2025
                 </h1>
 
                 <p className="text-lg mt-4 text-white">☀️ Summer is Here! What’s Your Plan?</p>
 
-                <div className="mt-4 space-y-2 text-white">
+                <div className="mt-4 space-y-2 text-gray-300">
                     <p>📱 Scrolling endlessly on your phone?</p>
                     <p>🍿 Binge-watching shows?</p>
                     <p>😴 Sleeping till noon?</p>
@@ -76,10 +76,10 @@ const InternshipForm = () => {
 
                 <p className="mt-6 font-semibold text-lg text-white">Why not do something that actually grows your career? 🚀</p>
 
-                <p className="mt-4 text-white">Introducing "Summer Virtual Internship Program 2025" brought to you by SSPD Technology Solutions! 💻 Work from home, spend just 4-5 hours daily, and gain real-world experience while building skills that make you job-ready! And guess what? It’s 100% FREE! 💯</p>
+                <p className="mt-4 text-gray-300">Introducing "Summer Virtual Internship Program 2025" brought to you by SSPD Technology Solutions! 💻 Work from home, spend just 4-5 hours daily, and gain real-world experience while building skills that make you job-ready! And guess what? It’s 100% FREE! 💯</p>
 
                 <p className="mt-6 text-lg font-semibold text-white">💡 Choose your field:</p>
-                <ul className="list-none mt-4 space-y-2 text-white">
+                <ul className="list-none mt-4 space-y-2 text-gray-300">
                     <li className="flex items-center gap-2"><span className="text-xl">💻</span> Software Development</li>
                     <li className="flex items-center gap-2"><span className="text-xl">📊</span> Business Development</li>
                     <li className="flex items-center gap-2"><span className="text-xl">📈</span> Digital Marketing</li>
@@ -89,7 +89,7 @@ const InternshipForm = () => {
                 </ul>
 
                 <p className="mt-6 font-semibold text-lg text-white">🎁 What you’ll get:</p>
-                <ul className="list-none mt-4 space-y-2 text-white">
+                <ul className="list-none mt-4 space-y-2 text-gray-300">
                     <li className="flex items-center gap-2"><span className="text-xl">✅</span> E-Certificate & Hard Copy Certificate 📜</li>
                     <li className="flex items-center gap-2"><span className="text-xl">✅</span> Offer Letter ✉️</li>
                     <li className="flex items-center gap-2"><span className="text-xl">✅</span> Letter of Recognition 📖</li>
@@ -294,7 +294,7 @@ const InternshipForm = () => {
                     <button
                         type="submit"
                         className={`w-40 mx-auto p-3 rounded-lg font-bold transition duration-300 ${formData.agreement
-                            ? "bg-cyan-600 text-white hover:bg-cyan-600 hover:scale-105 cursor-pointer"
+                            ? "bg-black text-white hover:scale-105 cursor-pointer"
                             : "bg-gray-400 text-gray-700 cursor-not-allowed"
                             }`}
                         disabled={!formData.agreement}

@@ -4,7 +4,7 @@ import logo from "./assets/logo.jpg"; // Ensure the image path is correct
 
 const Footer = () => {
     return (
-        <footer className="bg-cyan-600 text-white p-10 shadow-lg cursor-default select-none">
+        <footer className="bg-gradient-to-t from-black to-gray-900 text-white p-10 shadow-lg cursor-default select-none">
             <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
 
                 {/* Logo Section */}
